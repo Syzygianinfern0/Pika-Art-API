@@ -8,10 +8,13 @@
 ```script
 pip install -r requirements.txt
 ```
-3. We need two keys from [Pika.art](https://pika.art). You will need to login and use the browser's developer tools to get the keys. Submit a generation request and look for the `v1.5` request. The keys are in the headers under `Authorization`. Copy it along with the `Bearer` prefix. The second key is from any of the `my-library` requests. These should be populating automatically. Copy the `Cookie` header value along with the `sb-login` prefix. 
+3. We need three keys from [Pika.art](https://pika.art). You will need to login and use the browser's developer tools to get the keys (refer screenshots below). 
+   - Submit a generation request and look for the `v1.5` request. The keys are in the headers under `Authorization`. Copy it along with the `Bearer` prefix. 
+   - The second key is from any of the `my-library` requests. These should be populating automatically. Copy the `Cookie` header value along with the `sb-login` prefix. 
+   - The final key is from any of the `subscriptions` requests. Look for your User ID in the request URL. Copy it without the `eq.` prefix.
 4. Copy the `example_config.yaml` file to `config.yaml` and fill in the keys.
 5. Put your prompts in the `all_prompts.txt` file. Each prompt should be on a new line.
-6. Run the main script
+6. Run the main script.
 ```script
 python main.py
 ```
@@ -21,6 +24,9 @@ python main.py
 
 ### Library Cookie Key
 ![Jobs](./assets/jobs.png)
+
+### User ID
+![User ID](./assets/user_id.png)
 
 > [!NOTE]  
 > `main.py` calls generation requests parallely. It is extremely barebones. Feel free to modify it as you see fit. This codebase is provided as-is and do not expect any updates.

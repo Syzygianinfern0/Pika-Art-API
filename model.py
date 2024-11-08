@@ -2,8 +2,9 @@ import json
 import time
 
 import requests
+import yaml
 
-from headers import job_headers, request_headers
+from headers import job_headers, request_headers, user_id
 
 
 class Pika:
@@ -22,7 +23,7 @@ class Pika:
             'Content-Disposition: form-data; name="options"\r\n\r\n'
             '{"aspectRatio":1.7777777777777777,"frameRate":24,"camera":{},"parameters":{"guidanceScale":12,"motion":1,"negativePrompt":""},"extend":false}\r\n'
             "------WebKitFormBoundarylhk4yuvhmhQhMsem\r\n"
-            'Content-Disposition: form-data; name="userId"\r\n\r\n9074a1b4-82c2-4ec6-9a64-3ae088f5727d\r\n'
+            f'Content-Disposition: form-data; name="userId"\r\n\r\n{user_id}\r\n'
             "------WebKitFormBoundarylhk4yuvhmhQhMsem--\r\n"
         )
 

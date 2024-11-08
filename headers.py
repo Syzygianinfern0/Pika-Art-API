@@ -5,6 +5,7 @@ with open("config.yaml", "r") as file:
 
 generate_authorization = config["generate_authorization"]
 library_cookie = config["library_cookie"]
+user_id = config["user_id"]
 
 request_headers = {
     "accept": "*/*",
